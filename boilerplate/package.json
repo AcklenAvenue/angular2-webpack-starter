@@ -55,6 +55,7 @@
     "es7-reflect-metadata": "^1.5.5",
     "font-awesome": "^4.5.0",
     "font-awesome-webpack": "0.0.4",
+    "foundation": "^4.2.1-1",
     "jquery": "^2.2.0",
     "less": "^2.6.0",
     "less-loader": "^2.2.2",

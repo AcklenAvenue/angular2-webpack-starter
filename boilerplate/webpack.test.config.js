@@ -61,7 +61,8 @@ module.exports = {
       {test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff"},
       {test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader"},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,loader: "file"}, 
-      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,loader: "url?limit=10000&minetype=image/svg+xml"}
+      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,loader: "url?limit=10000&minetype=image/svg+xml"},
+      //{test: /\.scss$/,loader: "style-loader!sass-loader?outputStyle=expanded&includePaths[]=./node_modules/foundation/scss/"}
     ],
     postLoaders: [
       // instrument only testing sources with Istanbul

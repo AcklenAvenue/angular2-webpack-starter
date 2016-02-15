@@ -2,5 +2,5 @@
  * Created by ESiwady on 12/02/2016.
  */
 require('font-awesome-webpack');
-require('./app/app.less');
-require('bootstrap');
+require('./app/app.scss');
+
