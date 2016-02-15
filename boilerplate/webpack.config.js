@@ -72,8 +72,10 @@ module.exports = {
       {test: /\.scss$/, exclude: /node_modules/, loader: 'raw-loader!sass-loader!postcss-loader'},
       {test: /\.less$/, loader: 'raw-loader!less'},
       {test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff"},
-      {test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader"}
-
+      {test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader"},
+      {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,loader: "file"}, 
+      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,loader: "url?limit=10000&minetype=image/svg+xml"}
+      
       // if you add a loader include the resolve file extension above
     ]
   },
@@ -94,6 +96,11 @@ module.exports = {
         'ENV': JSON.stringify(metadata.ENV),
         'NODE_ENV': JSON.stringify(metadata.ENV)
       }
+    }),
+    new webpack.ProvidePlugin({
+        jQuery: 'jquery',
+        $: 'jquery',
+        jquery: 'jquery'
     })
   ],
 

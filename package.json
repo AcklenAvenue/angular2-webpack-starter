@@ -19,5 +19,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "typings": "^0.6.8"
+  },
+  "dependencies": {
   }
 }
